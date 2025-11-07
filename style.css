@@ -82,3 +82,35 @@ h1, h2, h3, h4, h5, h6 {
     gap: 2rem;
     padding-right: 4rem;
 }
+
+/* hero-section-styling */
+
+.hero-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-text-container{
+    height: 60vw;
+    gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero-text{
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+}
+
+.hero-subline{
+    width: 30rem;
+    font-size: larger;
+    word-spacing: 0.1rem;
+}
