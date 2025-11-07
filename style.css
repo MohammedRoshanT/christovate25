@@ -1,5 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+
+:root {
+  --color-primary: #ffd60a;
+  --color-gold: #E2B85A;
+  --color-gold-light: #F0D089;
+  --color-gold-dark: #C49A3E;
+  --color-crimson-bright: #E53935;
+  --color-crimson-deep: #8B0000;
+  --color-crimson-shadow: #7A0C0C;
+  --color-dark: #0B0B0B;
+  --color-dark-lighter: #1A1A1A;
+  --color-light: #F5F2EE;
+  --color-light-bg: #FFFFFF;
+}
+
+body {
+  font-family: 'Inter', 'Poppins', 'Roboto', sans-serif;
+  background: var(--color-primary) !important;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+.text-shadow-retro {
+  text-shadow: 4px 4px 0px var(--color-crimson-shadow);
 }
