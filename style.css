@@ -92,10 +92,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 4rem;
 }
 
 .hero-text-container{
-    height: 60vw;
     gap: 1.5rem;
     display: flex;
     align-items: center;
@@ -105,12 +105,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-text{
-    font-size: 4rem;
+    font-size: 6rem;
     letter-spacing: 0.2rem;
 }
 
+.hero-quote{
+    font-weight: bolder;
+    font-size: larger;
+}
+
 .hero-subline{
-    width: 30rem;
+    width: 40rem;
     font-size: larger;
     word-spacing: 0.1rem;
+}
+
+@media screen and (max-width: 767px) {
+    .hero-text{
+        font-size: 4rem
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .hero-text{
+        font-size: 2rem
+    }
+}
+
+.brochure-download-btn{
+    width: 8rem;
+    height: 3rem;
+    letter-spacing: 1px;
+    border: solid 3px #000;
+    background: none;
+    font-weight: bold;
+    color: #000;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.brochure-download-btn:hover{
+    background: #000;
+    color: #fff;
 }
