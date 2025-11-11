@@ -4,6 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap');
+
+
 
 * {
   margin: 0;
@@ -20,6 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 /* navbar styling */
@@ -257,3 +261,35 @@ body {
 .btn-53:hover span:nth-child(6) {
   transition-delay: 0.5s;
 }
+
+
+
+/* explore page */
+
+.explore-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #bf1828;
+}
+
+.explore-text-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.explore-text{
+    font-size: 10rem;
+    color: #fff;
+    font-family: "Antonio", sans-serif;
+}
+
+.explore-text:nth-child(2){
+    /* color: gold; */
+}
+
