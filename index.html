@@ -7,20 +7,206 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- navbar -->
+    <!-- navbar  -->
+    <div class="header-wrapper">
+      <header class="site-header" role="banner">
+        <nav class="nav" aria-label="Primary Navigation">
+          <div class="nav-inner">
+            <a class="nav-brand" href="#" aria-label="Homepage">CHRISTOVATE</a>
 
-    <header class="navbar-container">
-      <div class="logo-container">
-        <img src="assets/logo-christovate.png" alt="" />
+            <ul class="nav-menu" role="menubar">
+              <li role="none">
+                <a
+                  class="nav-link"
+                  href="#home"
+                  role="menuitem"
+                  aria-label="Home"
+                >
+                  <span class="nav-label">Home</span>
+                </a>
+              </li>
+              <li role="none">
+                <a
+                  class="nav-link"
+                  href="#about"
+                  role="menuitem"
+                  aria-label="About"
+                >
+                  <span class="nav-label">About</span>
+                </a>
+              </li>
+              <li role="none">
+                <a
+                  class="nav-link"
+                  href="#services"
+                  role="menuitem"
+                  aria-label="Services"
+                >
+                  <span class="nav-label">Services</span>
+                </a>
+              </li>
+              <li role="none">
+                <a
+                  class="nav-link"
+                  href="#contact"
+                  role="menuitem"
+                  aria-label="Contact"
+                >
+                  <span class="nav-label">Contact</span>
+                </a>
+              </li>
+            </ul>
+
+            <button
+              class="nav-toggle"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Menu</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M3 6h18" />
+                <path d="M3 12h18" />
+                <path d="M3 18h18" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <!-- hero-section -->
+
+    <section class="hero-section">
+      <div class="hero-text-container">
+        <div class="upper-section">
+          <h1 class="hero-text">
+            <span class="text-gold">CHRISTOVATE</span>
+          </h1>
+          <p class="quote">INNOVATION BASED MAKEATHON.</p>
+          <div class="brochure-download-btn-container  brochure-btn"">
+            <button class="btn-53">
+              <div class="original">BROCHURE</div>
+              <div class="letters">
+                <span>B</span>
+                <span>R</span>
+                <span>O</span>
+                <span>C</span>
+                <span>H</span>
+                <span>U</span>
+                <span>R</span>
+                <span>E</span>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="lower-section">
+          <p class="hero-subline">
+            Organized by Christ College of Engineering, Irinjalakuda, Kerala. An
+            innovation platform for students to explore challenges, collaborate,
+            and turn ideas into impactful solutions.
+          </p>
+        </div>
       </div>
-      <div class="menu-container">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Details</li>
-          <li>Contact</li>
-        </ul>
+    </section>
+
+    <!-- explore section  -->
+
+    <section class="explore-section">
+      <div class="explore-left">
+        <img src="/assets/jigsaw.png" alt="" />
       </div>
-    </header>
+      <div class="explore-right">
+        <h1 class="explore-text">CREATE</h1>
+        <h1 class="explore-text">TEAM UP</h1>
+        <h1 class="explore-text">COMPETE</h1>
+      </div>
+    </section>
+
+    <!-- contact section  -->
+    <section class="contact-section">
+      <!-- <img src="assets/CCE_Logo.png" alt="" class="contact-logo" /> -->
+      <h1 class="contact-text">REACH OUT.</h1>
+      <div class="contactBtn-wrapper">
+        <button class="btn-53 contact-btn">
+          <div class="original">CONTACT US</div>
+          <div class="letters">
+            <span>C</span>
+            <span>O</span>
+            <span>N</span>
+            <span>T</span>
+            <span>A</span>
+            <span>C</span>
+            <span>T</span>
+            <span> </span>
+            <span>U</span>
+            <span>S</span>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- footer section  -->
+
+    <footer class="ignite-footer" role="contentinfo">
+      <div class="footer-container">
+        <!-- Top hero row -->
+        <div class="footer-hero">
+          <h1 class="footer-title">Ignite Your Innovation!</h1>
+          <a href="#" class="cta-circle" aria-label="Start a Project">
+            <span>START BUILDING</span>
+          </a>
+        </div>
+
+        <!-- Bottom details grid -->
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h6 class="footer-heading">ADDRESS</h6>
+            <address class="footer-address">
+              Christ College of Engineering,<br />
+              Irinjalakuda,<br />
+              Thrissur,<br />
+              Kerala
+            </address>
+          </div>
+          <div class="footer-col">
+            <h6 class="footer-heading">LINKS</h6>
+            <ul class="footer-links">
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">My Courses</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h6 class="footer-heading">CONTACT</h6>
+            <ul class="footer-contact">
+              <li>
+                <a href="mailto:info@yourbrand.com">info@yourbrand.com</a>
+              </li>
+              <li><a href="tel:+1234567890">+1 234 567 890</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom line -->
+        <div class="footer-bottom">
+          <small
+            >Copyright © [Your Brand Name] 2025 • Design by [Your Name]</small
+          >
+        </div>
+      </div>
+    </footer>
   </body>
+  <script src="script.js"></script>
 </html>
