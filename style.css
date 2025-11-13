@@ -266,13 +266,14 @@ body {
   color: #fff;
   font-size: 8.8rem;
   font-weight: 400;
-  letter-spacing: -0.5rem;;
+  letter-spacing: -0.5rem;
+  margin-left: -10px;
+
 }
 
 .quote {
   font-size: 22px;
   margin-top: -40px;
-  margin-left: 22px;
   text-transform: capitalize;
   font-weight: 300;
   font-size: 22px;
@@ -282,12 +283,10 @@ body {
   width: 40rem;
   font-size: 19.8px;
   font-weight: 200;
-  margin-left: 22px;
 }
 
 .brochure-btn{
   margin-top: -10px;
-  margin-left: 10px;
 }
 
 .btn-53,
@@ -400,13 +399,13 @@ body {
   transition-delay: 0.5s;
 }
 
-@media (max-width: 860px){
+@media (max-width: 960px){
   .hero-text{
     font-size: 6.5rem;
+    margin-right: -10px;
   }
   .quote{
     font-size: 19px;
-    margin-left: 30px !important;
   }
 
   .hero-subline{
@@ -417,14 +416,28 @@ body {
 @media (max-width: 700px){
   .hero-text{
     font-size: 5rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
   }
   .quote{
-    font-size: 19px;
+    font-size: 17px;
   }
 
   .hero-subline{
-    font-size: 17px
+    font-size: 15px
+  }
+}
+
+@media (max-width: 700px){
+  .hero-text{
+    font-size: 5rem;
+    letter-spacing: 0.05rem;
+  }
+  .quote{
+    font-size: 17px;
+  }
+
+  .hero-subline{
+    font-size: 15px
   }
 }
 /* explore page */
