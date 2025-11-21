@@ -522,3 +522,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("resize", () => positionCards(0));
 });
+
+
+// domains
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".domain-card").forEach((card, i) => {
+        setTimeout(() => card.classList.add("loaded"), i * 120);
+      });
+    });
