@@ -3270,3 +3270,183 @@ body::-webkit-scrollbar {
     padding: 32px;
   }
 }
+
+/* Mobile overrides */
+@media (max-width: 768px) {
+  .cards {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .card {
+    position: relative;
+    margin: 0 auto 24px;
+    max-width: 92vw;
+    height: auto;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  .card-img {
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-subline {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: calc(var(--nav-height, 58px) + var(--nav-offset, 0px));
+    right: 16px;
+    left: 16px;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    z-index: 1000;
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-link {
+    justify-content: flex-start;
+    width: 100%;
+    padding: 12px;
+  }
+
+  .hero-section {
+    padding: 0 16px;
+  }
+
+  .hero-text {
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  .hero-text-container,
+  .upper-section,
+  .lower-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .brochure-download-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    width: 92vw;
+    margin: 0 auto 16px;
+  }
+
+  .Domains-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .Domain-card {
+    width: 92vw;
+    margin: 0 auto 16px;
+  }
+
+  .cards {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    height: auto;
+    padding: 0 16px;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 92vw;
+    height: auto;
+    margin: 0 auto 16px;
+    transform: none;
+  }
+
+  .card-img {
+    height: auto;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .about-hero-section,
+  .about-intro,
+  .mission-section,
+  .features-section,
+  .stats-section,
+  .registration-section,
+  .contact-section {
+    padding: 20px;
+  }
+
+  img, svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .explore-section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .explore-left,
+  .explore-right {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .explore-text {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    position: static;
+    margin: 4px 0;
+  }
+}
