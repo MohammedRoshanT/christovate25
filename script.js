@@ -432,6 +432,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     gsap.ticker.lagSmoothing(0);
 
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    const getNavHeight = () => {
+      const v = getComputedStyle(document.documentElement).getPropertyValue('--nav-height');
+      const h = parseFloat(v) || 0;
+      return h;
+    };
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        const target = href;
+        e.preventDefault();
+        const offset = -getNavHeight();
+        lenis.scrollTo(target, { offset });
+        if (open) {
+          open = false;
+          menu.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
 
     const stickySection = document.querySelector(".steps");
     const stickyHeight = window.innerHeight * 5.5;
@@ -531,3 +553,42 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => card.classList.add("loaded"), i * 120);
       });
     });
+
+// Contact modal
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("contactModalOverlay");
+  const triggers = [
+    ...document.querySelectorAll(".contact-modal-trigger"),
+    ...document.querySelectorAll(".contact-btn"),
+  ];
+  const closeBtn = overlay ? overlay.querySelector(".contact-modal-close") : null;
+
+  const open = () => {
+    if (overlay) overlay.classList.add("open");
+  };
+  const close = () => {
+    if (overlay) overlay.classList.remove("open");
+  };
+
+  triggers.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault();
+      open();
+    });
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      close();
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        close();
+      }
+    });
+  }
+});
