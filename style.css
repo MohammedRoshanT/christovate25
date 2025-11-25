@@ -1634,6 +1634,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   flex-direction: column;
   padding: 48px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .venue-section {
@@ -1758,7 +1759,7 @@ body::-webkit-scrollbar {
   justify-content: space-around;
   background: #000;
   color: #fff;
-  border-top: 1px solid rgba(196, 196, 196, 0.347);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-text {
@@ -2921,8 +2922,11 @@ body::-webkit-scrollbar {
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150vw;
-  height: 600px;
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   will-change: transform;
 }
 
@@ -2931,7 +2935,6 @@ body::-webkit-scrollbar {
   width: 500px;
   height: 550px;
   top: 50%;
-  left: 50%;
   left: 50%;
   transform-origin: center center;
   margin-left: -250px;
@@ -2961,11 +2964,14 @@ body::-webkit-scrollbar {
   line-height: 1.25;
 }
 
-.step-counter {
+.steps-counter {
   position: absolute;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 2em;
+  width: 100vw;
+  height: 30vh;
 }
 
 .counter-title,
@@ -3317,8 +3323,8 @@ body::-webkit-scrollbar {
 /* DOMAINS */
 
 .Domains-section {
-  padding: 120px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
 }
 
@@ -3488,7 +3494,7 @@ body::-webkit-scrollbar {
 /* LOGO SECTION */
 
 .carousel-section {
-  padding: 80px 0;
+  padding: 3rem 0;
   background-color: #000000;
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -3574,7 +3580,7 @@ body::-webkit-scrollbar {
 
 /* Individual Slide */
 .slide {
-  height: 150px;
+  height: 200px;
   width: 300px;
   display: flex;
   align-items: center;
@@ -3609,7 +3615,7 @@ body::-webkit-scrollbar {
 }
 
 .logo-xl {
-  height: 8em;
+  height: 8rem;
 }
 
 @media (min-width: 768px) {
@@ -3626,10 +3632,30 @@ body::-webkit-scrollbar {
   }
 
   .logo-xl {
-    height: 8em;
+    height: 12rem;
   }
 
   .section-title {
     font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text{
+    font-size: 3rem;
+  }
+
+  .about-hero-title{
+    font-size: 2rem;
+  }
+
+  .about-hero-subtitle{
+    font-size: 1rem;
+  }
+  .section-title{
+    font-size: 2rem;
+  }
+  .contact-text{
+    font-size: 1.5rem;
   }
 }
