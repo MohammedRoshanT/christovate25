@@ -39,16 +39,15 @@ body::-webkit-scrollbar {
 @keyframes appearfromBottom {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(500px);
   }
 
   to {
-    opacity: 1;
     transform: translateY(0px);
   }
 }
 
-@keyframes appearFromRightExplore {
+@keyframes appearFromRight {
   from {
     opacity: 0;
     transform: translateX(400px);
@@ -59,7 +58,7 @@ body::-webkit-scrollbar {
   }
 }
 
-@keyframes appearFromLeftExplore {
+@keyframes appearFromLeft {
   from {
     opacity: 0;
     transform: translateX(-400px);
@@ -451,6 +450,7 @@ body::-webkit-scrollbar {
 
   .upper-section {
     width: 100vw;
+    height: 60vw;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -459,7 +459,8 @@ body::-webkit-scrollbar {
   }
 
   .lower-section {
-    width: 90vw;
+    width: 100vw;
+    height: 40vw;
     display: flex;
     align-items: center;
     padding-bottom: 2.5rem;
@@ -625,7 +626,7 @@ body::-webkit-scrollbar {
 
 .explore-left img {
   width: 40rem;
-  animation: appearFromLeftExplore linear;
+  animation: appearFromLeft linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
 }
@@ -648,7 +649,7 @@ body::-webkit-scrollbar {
   font-weight: 800;
   letter-spacing: -0.2rem;
   margin-top: -77px;
-  animation: appearFromRightExplore linear;
+  animation: appearFromRight linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
@@ -981,6 +982,12 @@ body::-webkit-scrollbar {
   letter-spacing: 8px;
   margin-bottom: 24px;
   color: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, #b8b8b8 100%);
+}
+
+@media (max-width: 768px) {
+  .about-hero-title{
+    font-size: 52px;
+  }
 }
 
 @keyframes titleShimmer {
@@ -1722,9 +1729,6 @@ body::-webkit-scrollbar {
 }
 
 @media (max-width: 768px) {
-  body {
-    padding: 32px 16px;
-  }
   .venue-section {
     grid-template-columns: 1fr;
     padding: 24px;
@@ -1743,7 +1747,7 @@ body::-webkit-scrollbar {
   width: 100vw;
   height: 25vh;
   display: flex;
-  align-items: first center;
+  align-items: center;
   justify-content: space-around;
   background: #000;
   color: #fff;
@@ -1755,9 +1759,11 @@ body::-webkit-scrollbar {
   text-transform: capitalize;
   font-weight: 600;
   color: #fff;
-  animation: appearFromLeftExplore linear;
+  animation: appearFromLeft linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  position: absolute;
+  left: 10%;
 }
 
 .contactBtn-wrapper {
@@ -1765,10 +1771,12 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  right: 10%;
 }
 
 .contact-btn {
-  animation: appearFromRightExplore linear;
+  animation: appearFromRight linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
