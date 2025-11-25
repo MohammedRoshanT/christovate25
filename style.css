@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   /* scroll-behavior: smooth; */
 }
 
@@ -267,7 +267,6 @@ body::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   position: absolute;
-  
 }
 
 .upper-section {
@@ -989,11 +988,10 @@ body::-webkit-scrollbar {
   letter-spacing: 8px;
   margin-bottom: 24px;
   color: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, #b8b8b8 100%);
-
 }
 
 @media (max-width: 768px) {
-  .about-hero-title{
+  .about-hero-title {
     font-size: 52px;
   }
 }
@@ -1079,13 +1077,13 @@ body::-webkit-scrollbar {
   z-index: 1;
 }
 
-.intro-text{
+.intro-text {
   animation: appear both;
   animation-timeline: view();
   animation-range: entry 20% cover 100vh;
 }
 
-.intro-icon{
+.intro-icon {
   animation: appear both;
   animation-timeline: view();
   animation-range: entry 20% cover 100vh;
@@ -1098,7 +1096,6 @@ body::-webkit-scrollbar {
   margin-bottom: 32px;
   color: #ffffff;
 }
-
 
 .intro-text p {
   font-size: 18px;
@@ -1345,7 +1342,7 @@ body::-webkit-scrollbar {
   position: relative;
   overflow: hidden;
   animation: imageReveal both;
-  animation-timeline: view()
+  animation-timeline: view();
 }
 
 .feature-card::before {
@@ -2763,9 +2760,9 @@ body::-webkit-scrollbar {
   .section-title {
     font-size: 2rem;
     letter-spacing: 2px;
-  animation: appear both;
-  animation-timeline: view();
-  animation-range: entry 20% cover 100vh;
+    animation: appear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
   }
 
   .title-underline {
@@ -3488,153 +3485,151 @@ body::-webkit-scrollbar {
   }
 }
 
-
 /* LOGO SECTION */
 
-
 .carousel-section {
-    padding: 80px 0;
-    background-color: #000000;
-    position: relative;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 80px 0;
+  background-color: #000000;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .section-header {
-    text-align: center;
-    margin-bottom: 60px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: #ffffff;
-    animation: appear both;
-    animation-timeline: view();
-    animation-range: entry 20% cover 100vh;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
 }
 
 /* Carousel Container */
 .carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    background-color: #000000;
-    animation: appear both;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  animation: appear both;
   animation-timeline: view();
   animation-range: entry 10% cover 50%;
 }
 
 /* Fade Gradients */
 .fade-left {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 80px;
-    z-index: 10;
-    background: linear-gradient(to right, #050505, transparent);
-    pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  z-index: 10;
+  background: linear-gradient(to right, #050505, transparent);
+  pointer-events: none;
 }
 
 .fade-right {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    width: 80px;
-    z-index: 10;
-    background: linear-gradient(to left, #050505, transparent);
-    pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  z-index: 10;
+  background: linear-gradient(to left, #050505, transparent);
+  pointer-events: none;
 }
 
 @media (min-width: 768px) {
-    .fade-left,
-    .fade-right {
-        width: 160px;
-    }
+  .fade-left,
+  .fade-right {
+    width: 160px;
+  }
 }
 
 /* Animation */
 @keyframes scroll {
-    0% { 
-        transform: translateX(0); 
-    }
-    100% { 
-        transform: translateX(-50%); 
-    }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Carousel Track */
 .carousel-track {
-    display: flex;
-    width: calc(250px * 16);
-    animation: scroll 20s linear infinite;
+  display: flex;
+  width: calc(250px * 16);
+  animation: scroll 20s linear infinite;
 }
 
 .carousel-track:hover {
-    animation-play-state: paused;
+  animation-play-state: paused;
 }
 
 /* Individual Slide */
 .slide {
-    height: 150px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    perspective: 100px;
+  height: 150px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  perspective: 100px;
 }
 
 /* Logo Image Styling */
 .slide img {
-    opacity: 0.5;
-    filter: grayscale(100%);
-    transition: all 0.3s ease;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
 }
 
 .slide img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
+  opacity: 1;
+  filter: grayscale(0%);
 }
 
 /* Different logo sizes */
 .logo-sm {
-    height: 24px;
+  height: 24px;
 }
 
 .logo-md {
-    height: 32px;
+  height: 32px;
 }
 
 .logo-lg {
-    height: 40px;
+  height: 40px;
 }
 
 .logo-xl {
-    height: 8em;
+  height: 8em;
 }
 
 @media (min-width: 768px) {
-    .logo-sm {
-        height: 36px;
-    }
+  .logo-sm {
+    height: 36px;
+  }
 
-    .logo-md {
-        height: 40px;
-    }
+  .logo-md {
+    height: 40px;
+  }
 
-    .logo-lg {
-        height: 48px;
-    }
+  .logo-lg {
+    height: 48px;
+  }
 
-    .logo-xl {
-        height: 8em;
-    }
+  .logo-xl {
+    height: 8em;
+  }
 
-    .section-title {
-        font-size: 3rem;
-    }
+  .section-title {
+    font-size: 3rem;
+  }
 }
