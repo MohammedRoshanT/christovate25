@@ -1157,7 +1157,7 @@ body::-webkit-scrollbar {
   }
 
   50% {
-    transform: translateY(-20px) rotateZ(5deg);
+    transform: translateY(-20px) rotateZ(10deg);
   }
 }
 
