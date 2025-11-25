@@ -1326,6 +1326,9 @@ body::-webkit-scrollbar {
   position: relative;
   z-index: 1;
   margin-top: 3rem;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 .feature-card {
@@ -1341,18 +1344,8 @@ body::-webkit-scrollbar {
   border-radius: 8px;
   position: relative;
   overflow: hidden;
-}
-
-@keyframes imageReveal {
-  from {
-    filter: saturate(0) contrast(4) brightness(.1) blur(5px);
-    scale: .95;
-    translate: 0 4rem;
-  }
-
-  to {
-    file: kg vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-  }
+  animation: imageReveal both;
+  animation-timeline: view()
 }
 
 .feature-card::before {
@@ -1495,6 +1488,9 @@ body::-webkit-scrollbar {
   gap: 48px;
   position: relative;
   z-index: 1;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 .stat-item {
@@ -1656,6 +1652,9 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 28px;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 .title {
@@ -2018,7 +2017,6 @@ body::-webkit-scrollbar {
   background: #e31b23;
   /* bold red */
   position: relative;
-  overflow: hidden;
 }
 
 /* subtle textured overlay using noise-like gradient */
@@ -2071,6 +2069,9 @@ body::-webkit-scrollbar {
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 24px;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 .footer-title {
@@ -2129,6 +2130,9 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
   margin-top: 56px;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 .footer-heading {
@@ -2441,6 +2445,9 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-bottom: 80px;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 .info-box {
@@ -2519,10 +2526,12 @@ body::-webkit-scrollbar {
   text-align: center;
   margin-bottom: 48px;
   color: #ffffff;
-  animation: fadeInUp 0.8s ease-out;
   position: relative;
   display: inline-block;
   width: 100%;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
 }
 
 .subsection-title::after {
@@ -2542,6 +2551,9 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 .included-item {
@@ -2626,6 +2638,9 @@ body::-webkit-scrollbar {
   background: rgba(30, 30, 30, 0.4);
   transition: all 0.4s ease;
   animation: statBounce 0.6s ease-out;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 @keyframes statBounce {
@@ -3357,6 +3372,9 @@ body::-webkit-scrollbar {
   position: relative;
   z-index: 1;
   margin-top: 3rem;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 .Domain-card {
@@ -3503,6 +3521,9 @@ body::-webkit-scrollbar {
     width: 100%;
     overflow: hidden;
     background-color: #000000;
+    animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 50%;
 }
 
 /* Fade Gradients */
