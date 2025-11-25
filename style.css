@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
 @keyframes appear {
   from {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
   }
 
   to {
@@ -915,7 +915,6 @@ body::-webkit-scrollbar {
     ),
     #0a0a0a;
   position: relative;
-  overflow: hidden;
   will-change: transform;
 }
 
@@ -967,13 +966,15 @@ body::-webkit-scrollbar {
 .about-hero-content {
   text-align: center;
   z-index: 1;
-  animation: fadeInUp 1s ease-out;
+  animation: fadeInUp both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(100px);
   }
 
   to {
@@ -988,7 +989,7 @@ body::-webkit-scrollbar {
   letter-spacing: 8px;
   margin-bottom: 24px;
   color: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, #b8b8b8 100%);
-  
+
 }
 
 @media (max-width: 768px) {
@@ -1008,7 +1009,7 @@ body::-webkit-scrollbar {
 @keyframes subtitleFade {
   0%,
   100% {
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   50% {
@@ -1031,7 +1032,6 @@ body::-webkit-scrollbar {
     rgba(10, 10, 10, 0.5) 100%
   );
   position: relative;
-  overflow: hidden;
 }
 
 .about-intro::before {
@@ -1079,6 +1079,18 @@ body::-webkit-scrollbar {
   z-index: 1;
 }
 
+.intro-text{
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
+}
+
+.intro-icon{
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
+}
+
 .intro-text h2 {
   font-size: 36px;
   font-weight: 700;
@@ -1086,6 +1098,7 @@ body::-webkit-scrollbar {
   margin-bottom: 32px;
   color: #ffffff;
 }
+
 
 .intro-text p {
   font-size: 18px;
@@ -1195,7 +1208,6 @@ body::-webkit-scrollbar {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
-  overflow: hidden;
 }
 
 .mission-section::before {
@@ -1228,19 +1240,9 @@ body::-webkit-scrollbar {
 .mission-content {
   position: relative;
   z-index: 1;
-  animation: slideInFromLeft 1s ease-out;
-}
-
-@keyframes slideInFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
 }
 
 .mission-content h2 {
@@ -1264,7 +1266,6 @@ body::-webkit-scrollbar {
 .features-section {
   padding: 120px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  position: relative;
 }
 
 .features-section::before {
@@ -1301,7 +1302,9 @@ body::-webkit-scrollbar {
   letter-spacing: 3px;
   text-align: center;
   color: #ffffff;
-  animation: titleReveal 1s ease-out;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
 }
 
 @keyframes titleReveal {
@@ -1338,6 +1341,18 @@ body::-webkit-scrollbar {
   border-radius: 8px;
   position: relative;
   overflow: hidden;
+}
+
+@keyframes imageReveal {
+  from {
+    filter: saturate(0) contrast(4) brightness(.1) blur(5px);
+    scale: .95;
+    translate: 0 4rem;
+  }
+
+  to {
+    file: kg vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+  }
 }
 
 .feature-card::before {
@@ -2319,7 +2334,6 @@ body::-webkit-scrollbar {
   padding: 80px 20px;
   background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
   position: relative;
-  overflow: hidden;
 }
 
 .registration-section::before {
@@ -2723,7 +2737,7 @@ body::-webkit-scrollbar {
 .status-button:hover {
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    inset 0 1px 0 rgba(255, 255, 255, 0.514);
 }
 
 @media (max-width: 768px) {
@@ -2734,7 +2748,9 @@ body::-webkit-scrollbar {
   .section-title {
     font-size: 2rem;
     letter-spacing: 2px;
-    animation: fadeInUp 0.8s ease-out 0.1s backwards;
+  animation: appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
   }
 
   .title-underline {
@@ -3452,4 +3468,152 @@ body::-webkit-scrollbar {
   .Domain-card {
     padding: 32px;
   }
+}
+
+
+/* LOGO SECTION */
+
+
+.carousel-section {
+    padding: 80px 0;
+    background-color: #000000;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    animation: appear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 100vh;
+}
+
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+/* Fade Gradients */
+.fade-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    z-index: 10;
+    background: linear-gradient(to right, #050505, transparent);
+    pointer-events: none;
+}
+
+.fade-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    z-index: 10;
+    background: linear-gradient(to left, #050505, transparent);
+    pointer-events: none;
+}
+
+@media (min-width: 768px) {
+    .fade-left,
+    .fade-right {
+        width: 160px;
+    }
+}
+
+/* Animation */
+@keyframes scroll {
+    0% { 
+        transform: translateX(0); 
+    }
+    100% { 
+        transform: translateX(-50%); 
+    }
+}
+
+/* Carousel Track */
+.carousel-track {
+    display: flex;
+    width: calc(250px * 16);
+    animation: scroll 20s linear infinite;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* Individual Slide */
+.slide {
+    height: 150px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    perspective: 100px;
+}
+
+/* Logo Image Styling */
+.slide img {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.slide img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Different logo sizes */
+.logo-sm {
+    height: 24px;
+}
+
+.logo-md {
+    height: 32px;
+}
+
+.logo-lg {
+    height: 40px;
+}
+
+.logo-xl {
+    height: 8em;
+}
+
+@media (min-width: 768px) {
+    .logo-sm {
+        height: 36px;
+    }
+
+    .logo-md {
+        height: 40px;
+    }
+
+    .logo-lg {
+        height: 48px;
+    }
+
+    .logo-xl {
+        height: 8em;
+    }
+
+    .section-title {
+        font-size: 3rem;
+    }
 }
