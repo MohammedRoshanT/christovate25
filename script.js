@@ -421,6 +421,145 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// document.addEventListener("DOMContentLoaded", () => {
+//     gsap.registerPlugin(ScrollTrigger);
+
+//     const lenis = new Lenis();
+//     lenis.on("scroll", ScrollTrigger.update);
+//     gsap.ticker.add((time) => {
+//         lenis.raf(time * 1000);
+
+//     });
+//     gsap.ticker.lagSmoothing(0);
+
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    const getNavHeight = () => {
+      const v = getComputedStyle(document.documentElement).getPropertyValue('--nav-height');
+      const h = parseFloat(v) || 0;
+      return h;
+    };
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+        const target = href;
+        e.preventDefault();
+        const offset = -getNavHeight();
+        lenis.scrollTo(target, { offset });
+        if (open) {
+          open = false;
+          menu.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+
+    //event struture
+    
+
+
+//     const stickySection = document.querySelector(".steps");
+//     const cards = document.querySelectorAll(".card");
+//     const countContainer = document.querySelector(".count-container");
+//     const totalCards = cards.length;
+
+//     const enableDesktopSticky = () => window.innerWidth >= 900 && !!stickySection;
+
+//     if (enableDesktopSticky()) {
+//       const stickyHeight = window.innerHeight * 5.5;
+//       ScrollTrigger.create({
+//           trigger: stickySection,
+//           start: "top top",
+//           end: `+=${stickyHeight}px`,
+//           pin: true,
+//           pinSpacing: true,
+//           onUpdate: (self) => {
+//               positionCards(self.progress);
+//           },
+//       });
+//     }
+
+//     const getRadius = () => {
+//         return window.innerWidth < 900 
+//         ? window.innerWidth * 7.5 
+//         : window.innerWidth * 2.5;
+//     };
+
+//     const arcAngle = Math.PI * 0.4;
+//     const startAngle = Math.PI / 2 - arcAngle / 2;
+
+//     function positionCards(progress = 0) {
+//         const radius = getRadius();
+//         const totalTravel = 1 + totalCards / 7.5;
+//         const adjustedProgress = (progress * totalTravel - 1) * 0.75;
+
+//         cards.forEach((card, i) => {
+//             const normalizedProgress = (totalCards - 1 - i) / totalCards;
+//             const cardProgress = normalizedProgress + adjustedProgress;
+//             const angle = startAngle + arcAngle * cardProgress;
+
+
+//             const x = Math.cos(angle) * radius;
+//             const y = Math.sin(angle) * radius;
+//             const rotation = (angle - Math.PI / 2) * (180 / Math.PI);
+
+//             gsap.set(card, {
+//                 x: x,
+//                 y: -y + radius,
+//                 rotation: -rotation,
+//                 transformOrigin: "center center",
+//             });
+//         });
+//     };
+
+//     if (enableDesktopSticky()) {
+//       positionCards(0);
+//     }
+
+//     let currentCardIndex = 0;
+
+//     const options = {
+//         root: null,
+//         rootMargin: "0% 0%",
+//         threshold: 0.25,
+//     };
+
+//     if (enableDesktopSticky()) {
+//       const observer = new IntersectionObserver((entries) => {
+//           entries.forEach((entry) => {
+//               if(entry.isIntersecting) {
+//                   lastScrollY = window.scrollY;
+
+//                   let cardIndex = Array.from(cards).indexOf(entry.target);
+
+//                   currentCardIndex = cardIndex;
+
+//                   const targetY =  - currentCardIndex * 150;
+//                   gsap.to(countContainer, {
+//                       y: targetY,
+//                       duration: 0.3,
+//                       ease: "power1.out",
+//                       overwrite: true,
+//                   });
+
+//               }
+//           });
+//       }, options);
+
+//       cards.forEach((card) => {
+//           observer.observe(card);
+//       });
+
+//       window.addEventListener("resize", () => {
+//         if (enableDesktopSticky()) {
+//           positionCards(0);
+//         }
+//       });
+//     }
+// });
+
+
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
 
