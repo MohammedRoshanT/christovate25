@@ -3640,7 +3640,8 @@ body::-webkit-scrollbar {
 }
 
 @media (max-width: 900px){
-    section{
+    section:not(.carousel-section){
         overflow: hidden;
     }
 }
+
