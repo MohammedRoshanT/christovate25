@@ -3258,8 +3258,8 @@ body::-webkit-scrollbar {
     }
 
     .card {
-        width: 375px;
-        height: 500px;
+        width: 500px;
+        height: 600px;
         padding: 1em;
     }
 
@@ -3287,7 +3287,6 @@ body::-webkit-scrollbar {
     .card-subheading-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 2em;
     }
 
@@ -3302,6 +3301,74 @@ body::-webkit-scrollbar {
     }
 
     .card-subheading-container:nth-child(2) {}
+}
+
+@media (max-width: 525px) {
+    .counter-title {
+        height: 30px;
+        width: 100%;
+    }
+
+    .counter-title h1 {
+        font-size: 2em;
+    }
+
+    .count {
+        top: 0pc;
+        left: -10px;
+    }
+
+    .steps-counter {
+        margin: 1em;
+    }
+
+    .cards {
+        top: 27.5%;
+    }
+
+    .card {
+        width: 400px;
+        height: 600px;
+        padding: 1em;
+    }
+
+    .outro p {
+        font-size: 2em;
+    }
+
+    .card .text {
+        font-size: 2em;
+    }
+
+    .card-img p {
+        font-size: 1em;
+        padding: 0;
+    }
+
+    .card-content h3 {
+        font-size: 1em;
+    }
+
+    .card-heading-container .card-text {
+        font-size: 1.5rem;
+    }
+
+    .card-subheading-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .card-subheading-container h3 {
+        font-weight: 800;
+        font-size: 1.3em;
+        color: #fff;
+    }
+
+    .card-subheading-container p {
+        font-size: 1em;
+    }
+
 }
 
 /* DOMAINS */
@@ -3644,4 +3711,5 @@ body::-webkit-scrollbar {
         overflow: hidden;
     }
 }
+
 
