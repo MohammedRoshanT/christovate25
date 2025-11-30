@@ -1747,7 +1747,7 @@ body::-webkit-scrollbar {
 }
 
 .contact-text {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-transform: capitalize;
     font-weight: 600;
     color: #fff;
@@ -3711,5 +3711,6 @@ body::-webkit-scrollbar {
         overflow: hidden;
     }
 }
+
 
 
