@@ -1881,6 +1881,7 @@ body::-webkit-scrollbar {
         animation: appear both;
         animation-timeline: view();
         animation-range: entry 10% cover 50%;
+        font-size: 3rem;
     }
 }
 
@@ -3711,6 +3712,7 @@ body::-webkit-scrollbar {
         overflow: hidden;
     }
 }
+
 
 
 
